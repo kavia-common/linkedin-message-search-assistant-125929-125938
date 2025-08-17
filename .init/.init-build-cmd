@@ -1,0 +1,4 @@
+{
+    "command": "npm install && npx tsc --noEmit && npm test -- --ci",
+    "working_directory": "/home/kavia/workspace/code-generation/linkedin-message-search-assistant-125929-125938/linkedin_message_search_frontend"
+}
