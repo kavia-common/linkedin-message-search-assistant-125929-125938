@@ -1,0 +1,16 @@
+# Netlify configuration for LinkedIn Message Search app (React + Netlify Functions)
+# - Functions directory: linkedin_message_search_frontend/netlify/functions
+# - Publish directory: linkedin_message_search_frontend/build
+# - SPA fallback: Route all paths to /index.html
+
+[build]
+  publish = "linkedin_message_search_frontend/build"
+  functions = "linkedin_message_search_frontend/netlify/functions"
+  # Build the React app located in the subfolder
+  command = "npm run build --prefix linkedin_message_search_frontend"
+
+# SPA routing: send all non-file routes to the React app entry point
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
